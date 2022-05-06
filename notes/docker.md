@@ -27,3 +27,7 @@
 
 **docker-compose fore recreate containers**  
 `docker-compose up -d --force-recreate`
+
+**Get IP Address**
+`docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container`
+`docker inspect -f '{{ json .NetworkSettings }}' container | jq [.Networks]`
