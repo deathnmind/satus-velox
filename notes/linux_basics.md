@@ -69,9 +69,11 @@
 - Users and groups
   - `cut -d: -f1 /etc/passwd` - list all users
   - `adduser john` - add user
+  - `useradd -m john` - add user and create homedirectory
   - `usermod -aG sudo john` - add user to Group with append
   - `sudo groupadd new_group` - add a group
   - `sudo usermod -g wheel john` - change primary group
+  - `usermod --shell /bin/bash john` - set user's default shell
 
 - Misc
   - `tail -n +2 $file >> headerless.txt` - remove first line from file using tail
