@@ -21,6 +21,7 @@
       - expand: `bzip2 -dk filename.bz2`
     - gunzip
       - expand: `gunzip file.tar.gz`  
+  - tar and ignore version control files (ie .git): `tar --exclude-vcs -zcvf`
 
 - WTMP File
   - Commands to display information from wtmp log (sucessful logins)
