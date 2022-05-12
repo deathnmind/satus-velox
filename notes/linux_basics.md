@@ -80,3 +80,11 @@
   - `tail -n +2 $file >> headerless.txt` - remove first line from file using tail
   - `sudo cp /etc/netplan/00-installer-config.yaml{,.backup}` - Create a back file in one command line.
   - `ls /var/log/auth.log | less !$` - use the previous argument for next command -- !$
+  
+- Add APT gpg key from new source without using apt-key - **Example:**
+```bash
+  wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg 
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list' 
+rm -f packages.microsoft.gpg
+```
