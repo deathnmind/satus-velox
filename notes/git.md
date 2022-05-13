@@ -10,7 +10,8 @@
 `git config --global credential.helper store`
 
 ## Remove sensitive files
-<https://devconnected.com/how-to-delete-file-on-git/#:~:text=The%20easiest%20way%20to%20delete,the%20file%20to%20be%20deleted.&text=Note%20that%20by%20using%20the,be%20deleted%20from%20the%20filesystem>.
+[Github Refrence](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository).  
+[BFG Repo Cleaner](https://rtyley.github.io/bfg-repo-cleaner/).
 
 ```bash
 git clone --mirror https://github.com/repository/project
