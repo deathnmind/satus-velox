@@ -22,6 +22,7 @@
     - gunzip
       - expand: `gunzip file.tar.gz`  
   - tar and ignore version control files (ie .git): `tar --exclude-vcs -zcvf`
+  - Tar with ignore folder: `tar -cavf new_archive.tgz --exclude=.git ./files_to_compress`
 
 - WTMP File
   - Commands to display information from wtmp log (sucessful logins)
