@@ -12,7 +12,7 @@ Use php to run the `occ` commands and use `sudo` to run them as the service runn
 `sudo -u apache /opt/rh/php70/root/usr/bin/php /var/www/html/nextcloud/occ`
 
 ----
-## Snap Commands ##
+## Example commands - all formated for Snap uasage ##
 
 **Reset a user's password**  
 `sudo nextcloud.occ user:resetpassword admin`  
@@ -31,9 +31,9 @@ Use php to run the `occ` commands and use `sudo` to run them as the service runn
 
 ----
 
-## Self-signed certificates and Nextcloud Snap
+## Self-signed certificates
 
-Nextcloud snap expects the certificates to be in PEM format.  Most of the time certificates are created in the PEM format and renaming the file extension from .crt to .pem will suffice. Sometimes the certificates my be in DER format and conversion is required:  
+Nextcloud expects the certificates to be in PEM format.  Most of the time certificates are created in the PEM format and renaming the file extension from .crt to .pem will suffice. Sometimes the certificates my be in DER format and conversion is required:  
 `openssl x509 -inform DER -in yourdownloaded.crt -out outcert.pem -text`
 
 To enable SSL on Nextcloud the public, private, and full-chain (usually just the CA.crt) are required Copy the respective certificates into the snap's location (the SNAP will have a different number):
