@@ -1,18 +1,25 @@
-# Nextcloud #
+# Nextcloud
+
 All of the commands below work with the Snap, Docker, or base installed version of Nextcloud.  
+
 ## Snap
-The Snap commands are ran as `nextcloud.occ` 
+
+The Snap commands are ran as `nextcloud.occ`
+
 ## Docker
+
 If using the Docker of Nextcloud open an interactive command line into the container as the user running Nextcloud:  
 `docker exec -it -u 33 nextcloud /bin/bash`  
 Once inside the container run the `occ` command from `/var/www/html/occ`
 
 ## Base installation
+
 Use php to run the `occ` commands and use `sudo` to run them as the service running Nextcloud.  
 `sudo -u apache /opt/rh/php70/root/usr/bin/php /var/www/html/nextcloud/occ`
 
 ----
-## Example commands - all formated for Snap uasage ##
+
+## Example commands - all formatted for Snap usage
 
 **Reset a user's password**  
 `sudo nextcloud.occ user:resetpassword admin`  
@@ -29,6 +36,8 @@ Use php to run the `occ` commands and use `sudo` to run them as the service runn
 **Get LDAP Configuration**  
 `sudo nextcloud.occ ldap:show-config`  
 
+**Maintenance mode**  
+`sudo nextcloud.occ maintenance:mode --off`  
 ----
 
 ## Self-signed certificates
@@ -52,9 +61,10 @@ Enable HTTPS with custom certificates (must be PEM format)
 ----
 
 ## Trusted Domains
+
 After setting Nextcloud to HTTPS and the DNS resolution to a hostname be sure to add the host name to the trusted domains.
 
-Get the current list of trusted domains:   
+Get the current list of trusted domains:
 `sudo nextcloud.occ config:system:get trusted_domains`  
 This should return 1 item (the host nextcloud was installed as) and the list starts at 0.  To add to the list use value 1:  
 `sudo nextcloud.occ config:system:set trusted_domains 1 --value=nextcloud.internal`  
