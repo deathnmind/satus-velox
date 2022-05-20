@@ -30,7 +30,7 @@ Use php to run the `occ` commands and use `sudo` to run them as the service runn
 **Changed default files to empty directory**  
 `sudo nextcloud.occ config:system:set skeletondirectory --value=""`
 
-**Change protocol overwrite -- neccessary for mobile apps when proxied address is https but docker is http**
+**Change protocol overwrite -- neccessary for mobile apps when proxied address is https but docker is http**  b
 `sudo nextcloud.occ config:system:set  overwriteprotocol --value="https"`
 
 **Clear LDAP configuration**  
@@ -41,6 +41,7 @@ Use php to run the `occ` commands and use `sudo` to run them as the service runn
 
 **Maintenance mode**  
 `sudo nextcloud.occ maintenance:mode --off`  
+
 ----
 
 ## Self-signed certificates
