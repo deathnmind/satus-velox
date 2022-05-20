@@ -9,7 +9,7 @@ The Snap commands are ran as `nextcloud.occ`
 ## Docker
 
 If using the Docker of Nextcloud open an interactive command line into the container as the user running Nextcloud:  
-`docker exec -it -u 33 nextcloud /bin/bash`  
+`docker exec -it -u www-data nextcloud /bin/bash`  
 Once inside the container run the `occ` command from `/var/www/html/occ`
 
 ## Base installation
@@ -29,6 +29,9 @@ Use php to run the `occ` commands and use `sudo` to run them as the service runn
 
 **Changed default files to empty directory**  
 `sudo nextcloud.occ config:system:set skeletondirectory --value=""`
+
+**Change protocol overwrite -- neccessary for mobile apps when proxied address is https but docker is http**
+`sudo nextcloud.occ config:system:set  overwriteprotocol --value="https"`
 
 **Clear LDAP configuration**  
 `sudo nextcloud.occ ldap:delete-config s01`
