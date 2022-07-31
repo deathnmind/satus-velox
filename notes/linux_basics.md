@@ -1,4 +1,4 @@
-# Linux Command Line Primer #
+# Linux Command Line Primer
 
 - Archive commands
   - TAR Options:

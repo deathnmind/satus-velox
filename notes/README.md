@@ -1,4 +1,4 @@
-# Notes #
+# Notes
 
 This is a collection of notes manually taken and digitized for quick searching and refrence
 

@@ -1,3 +1,5 @@
+# DIG
+
 **Step1 find domain FQDN**</br>
 **Reverse DNS - resolver.domain should be the DNS server to query**</br>
 `dig @resolver.domain -x {IP_Address} +short`

@@ -1,4 +1,4 @@
-## Disable Resolved on Ubuntu ##
+## Disable Resolved on Ubuntu
 
 **Background** Ubuntu runs its own resolver DNS service, which can interfere with other programs that listen on default DNS ports.  This has to be stopped and disabled for these programs to work. This service is called `systemd-resolved`.  
 

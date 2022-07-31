@@ -1,3 +1,5 @@
+# Disk Images
+
 **commands to mount raw disk images - -r option is readonly -- maps to /dev/mapper**</br>
 `kpartx -a -v -r ./ image.raw`
 

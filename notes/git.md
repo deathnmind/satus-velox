@@ -7,6 +7,7 @@
 **Next time personal access token used it will be saved**: `git config --global credential.helper store`  
 
 ## Remove sensitive files
+
 [Github Refrence](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository).  
 [BFG Repo Cleaner](https://rtyley.github.io/bfg-repo-cleaner/).
 
@@ -22,13 +23,17 @@ git push --force
 
 - In the command line, navigate to the root directory of your project.
 - Initialize the local directory as a Git repository.
+
 ```
  git init -b main
 ```
+
 - Stage and commit all the files in your project
+
 ```
   git add . && git commit -m "initial commit"
 ```
+
 - To create a repository for your project on GitHub, use the `gh repo create` subcommand. When prompted, select Push an existing local repository to GitHub and enter the desired name for your repository. If you want your project to belong to an organization instead of your user account, specify the organization name and project name with organization-name/project-name.
 - Use personal access token for authentication - must have read:org permissions
 - Once through gh repo create run again after authentication to create and name the new repository
@@ -51,6 +56,7 @@ git push origin master
 
 - Edit `app.ini` add the indexing lines
 - `MAX_FILE_SIZE` indicates the maximum file size the indexer will scan
+
 ```
 [indexer]
 ; ...
@@ -63,3 +69,7 @@ REPO_INDEXER_EXCLUDE = resources/bin/**
 ```
 
 ---
+
+### Automatically preform GIT option after commit in VS Code
+
+In VS Code - **File** > **Preferences** > **Settings** -- search post commit... Change to desired git operation after successful commit. I set it to push.

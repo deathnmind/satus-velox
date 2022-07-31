@@ -1,4 +1,4 @@
-# How to use Multipass to quickly make Ubuntu Server Volatility profiles #
+# How to use Multipass to quickly make Ubuntu Server Volatility profiles
 
 Why multipass?  Its quicker to start and stop a multipass instance when changing the kernel compared to a VM or physical computer, or why not?
 
