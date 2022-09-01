@@ -1,3 +1,5 @@
+# Disks and Logical Volumes
+
 **Show disks by ID / LABEL / PATH / UUID**
 
 ```bash
@@ -8,7 +10,7 @@ lsblk
 
 **LVM Create and mount**  
 
-#### edit fstab and add /dev/mapper/lvm_opt-opt /opt xfs defaults 0 0 ####
+#### edit fstab and add /dev/mapper/lvm_opt-opt /opt xfs defaults 0 0
 
 ```bash
 pvcreate /dev/sdb

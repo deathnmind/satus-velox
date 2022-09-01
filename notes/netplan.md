@@ -1,9 +1,11 @@
-# Netplan Configuration - Examples #
+# Netplan Configuration - Examples
 
-## Netplan Commandline ##
-**Apply configuration:** `netplan apply` 
+## Netplan Commandline
 
-## Basic Static IP Address ##
+**Apply configuration:** `netplan apply`
+
+## Basic Static IP Address
+
 ```yml
 network:
   ethernets:
@@ -16,7 +18,8 @@ network:
   version: 2
 ```
 
-## Configure an interface up but without an IP address ##
+## Configure an interface up but without an IP address
+
 ```yml
 # An empty stanza will create an interface up without an address
 network:
