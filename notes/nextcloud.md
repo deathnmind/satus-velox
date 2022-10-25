@@ -42,6 +42,7 @@ Use php to run the `occ` commands and use `sudo` to run them as the service runn
 
 **Maintenance mode**  
 `sudo nextcloud.occ maintenance:mode --off`  
+
 ----
 
 ## Self-signed certificates
